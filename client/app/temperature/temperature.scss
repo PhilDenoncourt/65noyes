@@ -1,0 +1,29 @@
+.temperaturePanel {
+    position: absolute;
+    top:6%;
+    margin-left:-150px;
+    left:50%;
+    width:300px;
+    height:300px;
+}
+
+.currentTemp {
+  padding-top: 50px;
+  font-size: 48px;
+  text-align: center;
+  color: $reading-color1;
+}
+
+.feelsLikeTemp {
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+  color: $reading-color2;
+}
+
+.condition {
+  padding-top: 10px;
+  font-size: 36px;
+  text-align: center;
+  color: $reading-color3;
+}

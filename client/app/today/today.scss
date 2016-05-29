@@ -1,0 +1,28 @@
+.todayContainer {
+  position: absolute;
+  top: 2%;
+  margin-left: -150px;
+  left: 19.5%;
+  width: 300px;
+  height: 300px;
+}
+
+.todayDate {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 36px;
+  color:$reading-color1;
+}
+
+.todayTime {
+  text-align: center;
+  color: $reading-color2;
+  padding-top: 30px;
+  font-size: 48px;
+}
+.dayOfWeek {
+  text-align: center;
+  color: $reading-color3;
+  padding-top: 25px;
+  font-size: 36px;
+}
