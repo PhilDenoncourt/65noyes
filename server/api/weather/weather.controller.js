@@ -52,6 +52,7 @@ export function getLatest(rec, res) {
         rslt.condition = rslts[0].current_observation.icon;
         rslt.sunrise = rslts[0].sun_phase.sunrise.hour + ":" + rslts[0].sun_phase.sunrise.minute;
         rslt.sundown = rslts[0].sun_phase.sunset.hour + ":" + rslts[0].sun_phase.sunset.minute;
+        rslt.visibility = rslts[0].current_observation.visibility_mi
         rslt.forecast = _.map(rslts[0].forecast.txt_forecast.forecastday, (d)=> {
           return {
             title: d.title,

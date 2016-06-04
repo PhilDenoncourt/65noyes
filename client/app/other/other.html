@@ -1,6 +1,6 @@
 <div class="OtherContainer BottomRight">
   <div class="Wind">
-    Wind {{$ctrl.main.weather.windMph}} MPH from {{$ctrl.main.weather.windDegrees}} &deg;
+    Wind {{$ctrl.main.weather.windMph}} MPH -> {{$ctrl.main.weather.windDegrees}} &deg;
   </div>
   <div class="WindGust">
     Gusting to {{$ctrl.main.weather.windGustMph}} MPH
@@ -10,5 +10,8 @@
   </div>
   <div class="Rain">
     {{$ctrl.main.weather.rainLastHour}}" Rain (hr)
+  </div>
+  <div class="Visibility">
+    Visibility: {{$ctrl.main.weather.visibility}} miles
   </div>
 </div>
