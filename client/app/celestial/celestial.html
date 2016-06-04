@@ -1,0 +1,14 @@
+<div class="CelestialContainer BottomLeft">
+  <div class="CelestialSunrise">
+    Sunrise: {{$ctrl.main.weather.sunrise}}
+  </div>
+  <div class="CelestialSunset">
+    Sunrise: {{$ctrl.main.weather.sundown}}
+  </div>
+  <div class="CelestialTideIn">
+    {{$ctrl.main.weather.tides[0].type}} @ {{$ctrl.main.weather.tides[0].time}} ({{$ctrl.main.weather.tides[0].height}})
+  </div>
+  <div class="CelestialTideOut">
+    {{$ctrl.main.weather.tides[1].type}} @ {{$ctrl.main.weather.tides[1].time}} ({{$ctrl.main.weather.tides[1].height}})
+  </div>
+</div>

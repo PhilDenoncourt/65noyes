@@ -23,12 +23,13 @@ $reading-color3:        #3A5B82 !default;
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'celestial/celestial';
+@import 'forecast/forecast';
 @import 'main/main';
 @import 'moonPhase/moonPhase';
+@import 'Positioning';
 @import 'temperature/temperature';
 @import 'today/today';
-@import 'forecast/forecast';
-@import 'Positioning';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 /* endinject */

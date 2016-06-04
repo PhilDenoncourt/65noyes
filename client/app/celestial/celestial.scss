@@ -1,0 +1,29 @@
+.CelestialContainer {
+  width:300px;
+  height:300px;
+}
+
+.CelestialSunrise {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 65px;
+  color:$reading-color1;
+}
+.CelestialSunset {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 10px;
+  color:$reading-color1;
+}
+.CelestialTideIn {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+  color:$reading-color2;
+}
+.CelestialTideOut {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+  color:$reading-color2;
+}

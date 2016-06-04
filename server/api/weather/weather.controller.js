@@ -17,15 +17,20 @@ function handleError(res, err) {
 }
 
 export function getLatest(rec, res) {
-  var astronomyOptions = {
+  var localOptions = {
     uri:['http://api.wunderground.com/api/',config.weatherApiKey,'/astronomy/conditions/forecast/q/NH/Concord.json'].join(''),
+    json:true
+  };
+  var beachOptions = {
+    uri:['http://api.wunderground.com/api/',config.weatherApiKey,'/tide/q/NH/Hampton.json'].join(''),
     json:true
   };
   return new Promise(function (resolve, reject) {
     if (!cache.get('latest')) {
 
       Promise.all([
-        rp(astronomyOptions)
+        rp(localOptions),
+        rp(beachOptions)
       ]).then(function (rslts) {
 
         var rslt = {};
@@ -54,6 +59,18 @@ export function getLatest(rec, res) {
             icon: d.icon
           };
         });
+        rslt.tides = [
+          {
+            type:rslts[1].tide.tideSummary[0].data.type,
+            height:rslts[1].tide.tideSummary[0].data.height,
+            time:rslts[1].tide.tideSummary[0].date.hour + ':' +rslts[1].tide.tideSummary[0].date.min
+          },
+          {
+            type:rslts[1].tide.tideSummary[1].data.type,
+            height:rslts[1].tide.tideSummary[1].data.height,
+            time:rslts[1].tide.tideSummary[1].date.hour + ':' +rslts[1].tide.tideSummary[0].date.min
+          }
+        ]
         cache.put('latest', rslt, 1000 * 60 * 5);
         resolve(respondWithResult(res, cache.get('latest')));
       });
@@ -64,7 +81,7 @@ export function getLatest(rec, res) {
     }
 
   }).catch(function(e) {
-      return handleError(res,e);
+      reject(handleError(res,e));
   });
 
 }
