@@ -2,7 +2,7 @@
 
 (function() {
   class temperature {
-    static $inject=[];
+    static get $inject() { return []};
   }
 
 

@@ -2,7 +2,7 @@
 
 (function() {
   class moonPhase {
-    static $inject=[];
+    static get $inject() {return []};
   }
 
 

@@ -2,7 +2,7 @@
 
 (function() {
   class today {
-    static $inject=['$interval'];
+    static get $inject() {return ['$interval']};
 
     constructor($interval) {
       this.now = new Date();

@@ -2,7 +2,7 @@
 
 (function() {
   class weatherService {
-    static $inject=['$http']
+    static get $inject() {return ['$http']};
 
     constructor($http) {
       this.$http = $http;
