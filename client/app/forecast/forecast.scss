@@ -1,0 +1,13 @@
+.forecastPanel {
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 175px;
+  padding: 25px;
+}
+
+.forecastText {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 25px;
+    color:$reading-color1;
+}

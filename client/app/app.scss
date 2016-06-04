@@ -27,6 +27,8 @@ $reading-color3:        #3A5B82 !default;
 @import 'moonPhase/moonPhase';
 @import 'temperature/temperature';
 @import 'today/today';
+@import 'forecast/forecast';
+@import 'Positioning';
 @import '../components/footer/footer';
 @import '../components/modal/modal';
 /* endinject */
