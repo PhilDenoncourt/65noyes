@@ -1,0 +1,18 @@
+.OtherContainer {
+  width:300px;
+  height:300px;
+}
+
+.Wind {
+  text-align: center;
+  font-size: 22px;
+  padding-top: 75px;
+  color:$reading-color1;
+}
+
+.WindGust, .Pressure, .Rain {
+  text-align: center;
+  font-size: 22px;
+  padding-top: 10px;
+  color:$reading-color1;
+}
